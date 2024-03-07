@@ -1,0 +1,158 @@
+body {
+	height: 100dvh;
+	background-color: #38086e;
+	font-family: monospace;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0px 20px;
+}
+
+.weather__container {
+	max-width: 400px;
+	margin: 0px auto;
+	background-color: #fff;
+	border-radius: 15px;
+	padding: 30px;
+}
+
+.icon {
+	max-width: 32px;
+	max-height: 32px;
+	width: 100%;
+}
+
+.weather__head {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+}
+.weather__search-field {
+	border: #c9c9c9;
+	width: 100%;
+	font-size: 24px;
+	letter-spacing: 2px;
+	font-weight: 500;
+}
+
+
+.weather__search-field::placeholder {
+	letter-spacing: 0px;
+}
+
+.weather__search-field:focus {
+	outline: none;
+	padding-right: 5px;
+}
+
+.weather__search-btn {
+	transition: 0.2s;
+}
+
+.weather__head .weather__search-btn {
+	background-color: #fff;
+	border: none;
+}
+
+.weather__search-btn:hover {
+	transform: scale(1.1);
+}
+
+.weather__search-btn:active {
+	transform: scale(0.9);
+}
+
+
+
+.weather__body {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.weather__avatar {
+	width: 100%;
+	max-width: 200px;
+	margin-bottom: 20px;
+	border-radius: 20px 20px 2px 2px;
+	opacity: 0.8;
+	transition: 0.8s;
+}
+
+.weather__avatar:hover {
+	transform: rotateY(180deg);
+}
+
+.weather__temp {
+	margin-bottom: 10px;
+	font-size: 42px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	padding-right: 18px;
+}
+
+.weather__temp::after {
+	content: "°C";
+	position: absolute;
+	font-size: 28px;
+}
+
+.weather__temp_feels {
+	font-size: 24px;
+	margin-bottom: 5px;
+	padding-right: 18px;
+}
+
+.weather__temp_feels::before {
+	content: 'feels:';
+	font-size: 18px;
+	text-transform: uppercase;
+	padding-right: 5px;
+}
+
+.weather__temp_feels::after {
+	content: "°C";
+	position: absolute;
+	font-size: 18px;
+}
+
+.weather__atmosphere {
+	font-size: 20px;
+	font-weight: 500;
+}
+
+.weather__footer {
+	display: flex;
+	justify-content: space-around;
+	gap: 20px;
+}
+
+.weather__footer > div{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-weight: 600;
+	font-size: 20px;
+}
+
+.clouds-procent::after {
+	content: "%";
+	margin-left: 5px;
+}
+
+.wind-speed::after {
+	content: "m/s";
+	margin-left: 5px;
+}
+
+
+@media screen and (width < 400px) {
+	.weather__search-field, .weather__search-field::placeholder {
+		font-size: 16px;
+	}
+
+	.weather__footer > div{
+		font-size: 14px;
+	}
+}

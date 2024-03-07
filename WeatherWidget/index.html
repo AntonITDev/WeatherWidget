@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Weather Widget</title>
+	<link rel="stylesheet" href="styles/normalize.css">
+	<link rel="stylesheet" href="styles/main.css">
+	<link rel="icon" href="images/icons/cloud_weather_22376.ico">
+</head>
+<body>
+	<div class="weather__container">
+		<div class="weather__head">
+			<img class="icon" src="images/icons/icon-location.png" alt="location">
+			<input class="weather__search-field" type="search" placeholder="Enter your City, Country">
+			<button class="weather__search-btn">
+				<img class="icon" src="images/icons/icon-search.svg" alt="search">
+			</button>
+		</div>
+		<div class="weather__body">
+			<img class="weather__avatar" src="images/weather__avatar.png" alt="weather">
+			<p class="weather__temp">0</p>
+			<p class="weather__temp_feels">0</p>
+			<p class="weather__atmosphere">Clouds</p>
+		</div>
+		<div class="weather__footer">
+			<div class="weather__clouds__body">
+				<img class="clouds__icon icon" src="images/icons/icon-clouds.svg" alt="clouds">
+				<div class="clouds__info">
+					<p class="clouds-procent">0</p>
+					<p class="weather__clouds-label">clouds</p>
+				</div>
+			</div>
+			<div class="weather__wind__body">
+				<img class="wind__icon icon" src="images/icons/icon-windy.svg" alt="wind">
+				<div class="wind__info">
+					<p class="wind-speed">0</p>
+					<p class="weather__wind-label">Wind Speed</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="scripts/weather.js"></script>
+</body>
+</html>
